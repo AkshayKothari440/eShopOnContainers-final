@@ -5,6 +5,7 @@ using Microsoft.eShopOnContainers.WebMVC.ViewModels;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WebMVC.Infrastructure;
 using WebMVC.Models;
@@ -117,10 +118,22 @@ namespace Microsoft.eShopOnContainers.WebMVC.Services
                     BuyerId = user.Id,
                     Items = new List<BasketItem>()
                 };
+                basket.Items.Add(product);
             }
-             
-            basket.Items.Add(product);
+            else
+            {
+                var cartItem = basket.Items.SingleOrDefault(i => i.ProductId == product.ProductId);
+                if (cartItem == null)
+                {
+                    basket.Items.Add(product);
 
+                }
+                else
+                {
+                    cartItem.Quantity++;
+                }
+      
+            }
             await UpdateBasket(basket);
         }        
 
