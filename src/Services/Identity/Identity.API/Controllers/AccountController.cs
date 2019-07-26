@@ -69,6 +69,10 @@ namespace IdentityServer4.Quickstart.UI.Controllers
             }
 
             var vm = await BuildLoginViewModelAsync(returnUrl, context);
+            //if (vm.EnableLocalLogin == 3 && vm.ExternalProviders.Count()==1)
+            //{
+            //    return ExternalLogin(vm.ExternalProviders.First().AuthenticationScheme, returnUrl);
+            //}
             ViewData["ReturnUrl"] = returnUrl;
 
             return View(vm);
