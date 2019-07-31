@@ -15,6 +15,7 @@ namespace Microsoft.eShopOnContainers.Services.Catalog.API
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
              .UseStartup<Startup>()
+                //.UseUrls("http://localhost:65003")
                 .UseHealthChecks("/hc")
                 .UseContentRoot(Directory.GetCurrentDirectory())               
                 .UseWebRoot("Pics")

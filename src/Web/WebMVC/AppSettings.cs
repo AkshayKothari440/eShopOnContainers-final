@@ -15,6 +15,7 @@ namespace Microsoft.eShopOnContainers.WebMVC
         public bool ActivateCampaignDetailFunction { get; set; }
         public Logging Logging { get; set; }
         public bool UseCustomizationData { get; set; }
+        public string ApiGatewayUrl { get; set; }
     }
 
     public class Connectionstrings

@@ -32,7 +32,7 @@ namespace Microsoft.eShopOnContainers.WebMVC
         {
             services.AddMvc();            
             services.AddSession();
-
+            
             if (Configuration.GetValue<string>("IsClusterEnv") == bool.TrueString)
             {
                 services.AddDataProtection(opts =>

@@ -56,6 +56,7 @@ namespace Microsoft.eShopOnContainers.Services.Catalog.API.Controllers
 
         [HttpGet]
         [Route("items/{id:int}")]
+
         public async Task<IActionResult> GetItemById(int id)
         {
             if (id <= 0)
