@@ -24,7 +24,8 @@ namespace Microsoft.eShopOnContainers.WebMVC.Services
             IHttpClient httpClient)
         {
             _settings = settings;
-            _remoteServiceBaseUrl = $"{_settings.Value.BasketUrl}/api/v1/basket";
+            //_remoteServiceBaseUrl = $"{_settings.Value.BasketUrl}/api/v1/basket";
+            _remoteServiceBaseUrl = $"{_settings.Value.ApiGatewayUrl}/api/v1/b/basket";
             _httpContextAccesor = httpContextAccesor;
             _apiClient = httpClient;
         }

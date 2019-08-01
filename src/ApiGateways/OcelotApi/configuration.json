@@ -22,11 +22,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/{version}/b/{everything}",
-      "UpstreamHttpMethod": [],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "IdentityApiKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": []
     },
     {
       "DownstreamPathTemplate": "/api/{version}/{everything}",
@@ -38,11 +34,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/{version}/o/{everything}",
-      "UpstreamHttpMethod": [],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "IdentityApiKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": []
     },
     {
       "DownstreamPathTemplate": "/{everything}",
@@ -56,6 +48,7 @@
       "UpstreamPathTemplate": "/payment-api/{everything}",
       "UpstreamHttpMethod": []
     }
+    
   ],
   "GlobalConfiguration": {
     "RequestIdKey": "OcRequestId",
